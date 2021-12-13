@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar tu contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-input type="email" #email required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" (click)="onResetPassword(email)" expand="block">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <small>
+      Proporcione el nombre de usuario o la dirección de correo electrónico que utilizó cuando creó
+      su cuenta de Donante
+    </small>
+  </form>
+</ion-content>

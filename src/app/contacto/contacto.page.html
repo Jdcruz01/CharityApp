@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="folder/Bienvenido"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="itemIntroText"> 
+    <ion-card >
+      <ion-card-content style="text-align: justify;">
+        <ion-text color="dark">
+  <div>
+    <img class="imagenfondo" src="https://www.cometasdeesperanza.org/wp-content/uploads/2021/05/logo-1.svg" alt="">
+    </div>
+    <div id="after_submit"></div>
+    <form #ContactoForm="ngForm" (ngSubmit)="OnSubmit(ContactoForm)" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+      <div class="row">
+        <label class="required" for="name">Nombre:</label><br />
+        <input id="name" class="input" name="nombre" type="text" value="" size="38" #name="ngModel"
+        [(ngModel)]="services.selectTUnete.nombre"/><br />
+        <span id="name_validation" class="error_message"></span>
+      </div>
+      <div class="row">
+        <label class="required" for="email">Correo electronico:</label><br />
+        <input id="email" class="input" name="correo" type="text" value="" size="38"  #name="ngModel"
+        [(ngModel)]="services.selectTUnete.correo"/><br />
+        <span id="email_validation" class="error_message"></span>
+      </div>
+      <div class="row">
+        <label class="required" for="message">Contactanos:</label><br />
+        <textarea id="message" class="input" name="descripcion" rows="7" cols="42"#name="ngModel"
+        [(ngModel)]="services.selectTUnete.descripcion"></textarea><br />
+        <span id="message_validation" class="error_message"></span>
+      </div>
+        
+  <input id="submit_button" type="submit" value="Enviar" />
+    </form>
+
+    
+Cometas de Esperanza es una organización social, educativa y medioambiental que ejerce su labor sin fines de lucro.
+
+La Mosca Cienfuegos, Calle Principal, Santiago De Los Caballeros, República Dominicana.
+
+Tel.: (809) 295-9858 | Cel 1.: (829) 470-8868 | Cel 2.: (809) 543-3233
+</ion-text>
+</ion-card-content>
+</ion-card>
+</div> 
+</ion-content>

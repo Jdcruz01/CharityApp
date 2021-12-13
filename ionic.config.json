@@ -1,0 +1,7 @@
+{
+  "name": "cometaesperanza",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

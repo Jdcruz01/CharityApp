@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="folder/Bienvenido"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reportes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<img class="imagenfondo" src="https://www.cometasdeesperanza.org/wp-content/uploads/2020/02/page-title-bg-1.jpg"alt="" width="360" height="155">
+<ion-content>
+  <h><center>Cuentanos</center></h>
+  <div id="after_submit"></div>
+  <form  #ReporteForm="ngForm" (ngSubmit)="OnSubmit(ReporteForm)" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+    <div class="row">
+      <label class="required" for="name">Nombre:</label><br />
+      <input id="name" class="input" name="nombre" type="text" value="" size="38"  #name="ngModel"
+      [(ngModel)]="services.selectTUnete.nombre"/><br />
+      <span id="name_validation" class="error_message"></span>
+    </div>
+    <div class="row">
+      <label class="required" for="email">Direccion:</label><br />
+      <input id="email" class="input" name="direccion" type="text" value="" size="38" #name="ngModel"
+      [(ngModel)]="services.selectTUnete.direccion"/><br />
+      <span id="email_validation" class="error_message"></span>
+    </div>
+    <div class="row">
+      <label class="required" for="email">telefono:</label><br />
+      <input id="email" class="input" name="telefono" type="text" value="" size="38" #name="ngModel"
+      [(ngModel)]="services.selectTUnete.telefono"/><br />
+      <span id="email_validation" class="error_message"></span>
+    </div>
+    <div class="row">
+      <label class="required" for="message">Cuentanos:</label><br />
+      <textarea id="message" class="input" name="descripcion" rows="7" cols="40"#name="ngModel"
+      [(ngModel)]="services.selectTUnete.descripcion"></textarea><br />
+      <span id="message_validation" class="error_message"></span>
+    </div>
+      
+      <input id="submit_button" type="submit" value="Enviar" />
+  </form>
+</ion-content>
